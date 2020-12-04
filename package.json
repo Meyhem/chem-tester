@@ -4,6 +4,7 @@
   "private": true,
   "main": "src/electron.js",
   "homepage": "http://meyhem.github.io/chem-tester",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
