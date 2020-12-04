@@ -6,9 +6,6 @@ import { ErrorBoundary } from './error-boundary'
 import { usePersistedState, inTestState, quizState } from '../state'
 
 const StyledPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 36px;
   height: 100%;
 `
@@ -24,6 +21,9 @@ const StyledStep = styled(Steps.Step)`
 `
 
 const ResetButton = styled(Button)`
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
   align-self: flex-end;
   margin-top: auto;
 `
