@@ -1,13 +1,14 @@
 import { Form, Field } from 'react-final-form'
 import _ from 'lodash'
-import { Radio, Button, Input } from 'antd'
+import { useEffect } from 'react'
+import { Radio, Button, Input, Divider } from 'antd'
 import styled from 'styled-components'
 import { useRecoilState } from 'recoil'
 import { useHistory } from 'react-router-dom'
 
 import { Page } from '../components/page'
 import { composeValidators, isNumber, min, required } from '../validators'
-import { quizState, setupState, usePersistedState } from '../state'
+import { inTestState, quizState, setupState, usePersistedState } from '../state'
 
 import { createQuizState } from '../quiz-util'
 
@@ -37,15 +38,23 @@ const Error = styled.div`
 
 export const Setup = () => {
   const [setup, setSetup] = useRecoilState(setupState)
-  const [, setQuiz] = usePersistedState(quizState)
+  const [quiz, setQuiz] = usePersistedState(quizState)
+  const [inTest, setInTest] = usePersistedState(inTestState)
   const history = useHistory()
 
+  useEffect(() => {
+    if (inTest) {
+      history.push('/quiz/1')
+    }
+  }, [inTest, history])
+
   return (
-    <Page heading="Nastavenie testu">
+    <Page step={0}>
       <Form
         initialValues={setup}
         onSubmit={vals => {
           setSetup(vals)
+          setInTest(true)
           const newQuizState = createQuizState(vals)
           setQuiz(newQuizState)
           _.defer(() => history.push('/quiz/1'))
@@ -90,6 +99,12 @@ export const Setup = () => {
           </FormLayout>
         )}
       />
+      <Divider />
+      {!!_.size(quiz) && (
+        <Button onClick={() => history.push('/hodnotenie')}>
+          Pozrieť posledný test
+        </Button>
+      )}
     </Page>
   )
 }

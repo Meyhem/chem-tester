@@ -1,10 +1,8 @@
 import _ from 'lodash'
+import db from './db.json'
 
-const db = _.times(20, i => ({
-  latin: `falusium ${i}`,
-  slovak: `kokotium ${i}`,
-  formula: `KKT₂ ${i}`,
-}))
+// X\u2082'
+// https://csvjson.com/csv2json
 
 function formatQuestionText(type, prompt, chem) {
   switch (type) {

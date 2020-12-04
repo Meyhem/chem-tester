@@ -20,8 +20,8 @@ export const quizState = persistedAtom({
   default: [],
 })
 
-export const lockState = persistedAtom({
-  key: 'lockState',
+export const inTestState = persistedAtom({
+  key: 'inTestState',
   default: false,
 })
 

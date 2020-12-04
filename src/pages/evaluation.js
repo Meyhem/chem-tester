@@ -1,10 +1,12 @@
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import { Radio, Divider } from 'antd'
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons'
 import _ from 'lodash'
+import { useHistory } from 'react-router-dom'
 
 import { Page } from '../components/page'
-import { quizState, usePersistedState } from '../state'
+import { inTestState, quizState, usePersistedState } from '../state'
 
 const Question = styled.strong`
   color: ${({ $correct }) => ($correct ? '#28b900' : '#e10000')};
@@ -53,9 +55,17 @@ const ResultTable = styled.table`
 
 export function Evaluation() {
   const [quiz] = usePersistedState(quizState)
+  const [inTest] = usePersistedState(inTestState)
+  const history = useHistory()
+
+  useEffect(() => {
+    if (!_.size(quiz) || inTest) {
+      history.push('/')
+    }
+  }, [quiz, inTest, history])
 
   return (
-    <Page heading="Hodnotenie testu">
+    <Page step={3}>
       <ResultsColumns>
         <MainStat>
           <MainStatLarge>

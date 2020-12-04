@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import _ from 'lodash'
 import { Button } from 'antd'
@@ -8,7 +9,7 @@ import {
 } from '@ant-design/icons'
 import { Link, useHistory } from 'react-router-dom'
 
-import { lockState, quizState, usePersistedState } from '../state'
+import { inTestState, quizState, usePersistedState } from '../state'
 import { Page } from '../components/page'
 
 const QuestionSummary = styled(Link)`
@@ -48,8 +49,14 @@ const SubmitContainer = styled.div`
 
 export function Summary() {
   const [quiz, setQuiz] = usePersistedState(quizState)
-  const [, setLock] = usePersistedState(lockState)
+  const [inTest, setInTest] = usePersistedState(inTestState)
   const history = useHistory()
+
+  useEffect(() => {
+    if (!inTest) {
+      history.push('/hodnotenie')
+    }
+  }, [inTest, history])
 
   const submitTest = () => {
     const shouldContinue = confirm(
@@ -59,13 +66,13 @@ export function Summary() {
       setQuiz(
         _.map(quiz, q => ({ ...q, correct: q.answer === q.chem[q.targetType] }))
       )
-      setLock(true)
+      setInTest(false)
       _.defer(() => history.push('/hodnotenie'))
     }
   }
 
   return (
-    <Page heading="Prehľad zaznamenaných odpovedí">
+    <Page step={2}>
       <p>
         Prehľad zodpovedaných a nezodpovedaných otázok. Kliknutím na otázku sa
         môžete vrátiť do testu a zmeniť svoju odpoveď.

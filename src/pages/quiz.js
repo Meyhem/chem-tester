@@ -4,7 +4,7 @@ import { Button, Radio, Divider } from 'antd'
 import _ from 'lodash'
 import styled from 'styled-components'
 
-import { quizState, usePersistedState } from '../state'
+import { inTestState, quizState, usePersistedState } from '../state'
 import { Page } from '../components/page'
 
 const Question = styled.div`
@@ -29,8 +29,15 @@ export const Quiz = ({
 }) => {
   const index = Number(order - 1)
   const [quiz, setQuiz] = usePersistedState(quizState)
+  const [inTest] = usePersistedState(inTestState)
   const history = useHistory()
   const currentQuestion = quiz[index]
+
+  useEffect(() => {
+    if (!inTest) {
+      history.push('/hodnotenie')
+    }
+  }, [inTest, history])
 
   useEffect(() => {
     if (quiz.length && !currentQuestion) {
@@ -52,7 +59,10 @@ export const Quiz = ({
   }
 
   return (
-    <Page heading={`Otázka ${order}/${quiz.length}`}>
+    <Page step={1}>
+      <h1>
+        Otázka {order}/{quiz.length}
+      </h1>
       {currentQuestion && (
         <Question>
           <Divider />
