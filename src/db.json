@@ -10,33 +10,38 @@
     "formula": "H_2O"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Hydroxid Sodný",
+    "latin": "Natrii hydroxidum",
+    "formula": "NaOH"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Zlato",
+    "latin": "Aurum",
+    "formula": "Au"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Ozón",
+    "latin": "Ozone",
+    "formula": "O_3"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Chróm",
+    "latin": "Chromium",
+    "formula": "Ch"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Kyslík",
+    "latin": "Oxxygen",
+    "formula": "O"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Kyanid",
+    "latin": "Hydrogen Cyanide",
+    "formula": "HCN"
+  },
+  {
+    "slovak": "Polónium",
+    "latin": "Pollonium",
+    "formula": "Po"
   }
 ]

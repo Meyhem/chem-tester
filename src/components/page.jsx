@@ -1,11 +1,16 @@
 import styled from 'styled-components'
-import { Steps } from 'antd'
+import { Button, Steps } from 'antd'
 import _ from 'lodash'
 import { useHistory } from 'react-router-dom'
+import { ErrorBoundary } from './error-boundary'
 import { usePersistedState, inTestState, quizState } from '../state'
 
 const StyledPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 36px;
+  height: 100%;
 `
 
 const StyledSteps = styled(Steps)`
@@ -18,39 +23,51 @@ const StyledStep = styled(Steps.Step)`
   }
 `
 
+const ResetButton = styled(Button)`
+  align-self: flex-end;
+  margin-top: auto;
+`
+
 export const Page = ({ step, children }) => {
   const history = useHistory()
   const [inTest] = usePersistedState(inTestState)
   const [quiz] = usePersistedState(quizState)
   const redirect = p => () => history.push(p)
+  const restartApp = () => {
+    localStorage.clear()
+    location.reload()
+  }
   return (
-    <StyledPage>
-      <StyledSteps current={step} size="small">
-        <StyledStep
-          disabled={inTest}
-          onClick={(!inTest && redirect('/')) || undefined}
-          title="Nastavenie testu"
-        />
-        <StyledStep
-          disabled={!inTest}
-          onClick={(inTest && redirect('/quiz/1')) || undefined}
-          title="Test"
-        />
-        <StyledStep
-          disabled={!inTest}
-          onClick={(inTest && redirect('/prehlad')) || undefined}
-          title="Prehľad otázok"
-        />
-        <StyledStep
-          disabled={inTest || !_.size(quiz)}
-          onClick={
-            (!inTest && _.size(quiz) && redirect('/hodnotenie')) || undefined
-          }
-          title="Hodnotenie"
-        />
-      </StyledSteps>
+    <ErrorBoundary>
+      <StyledPage>
+        <StyledSteps current={step} size="small">
+          <StyledStep
+            disabled={inTest}
+            onClick={(!inTest && redirect('/')) || undefined}
+            title="Nastavenie testu"
+          />
+          <StyledStep
+            disabled={!inTest}
+            onClick={(inTest && redirect('/quiz/1')) || undefined}
+            title="Test"
+          />
+          <StyledStep
+            disabled={!inTest}
+            onClick={(inTest && redirect('/prehlad')) || undefined}
+            title="Prehľad otázok"
+          />
+          <StyledStep
+            disabled={inTest || !_.size(quiz)}
+            onClick={
+              (!inTest && _.size(quiz) && redirect('/hodnotenie')) || undefined
+            }
+            title="Hodnotenie"
+          />
+        </StyledSteps>
 
-      {children}
-    </StyledPage>
+        {children}
+        <ResetButton onClick={restartApp}>Resetovať aplikáciu</ResetButton>
+      </StyledPage>
+    </ErrorBoundary>
   )
 }

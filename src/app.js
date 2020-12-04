@@ -7,7 +7,7 @@ import { Evaluation } from './pages/evaluation'
 
 export function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Setup} />
         <Route exact path="/quiz/:order" component={Quiz} />
