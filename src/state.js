@@ -11,7 +11,7 @@ export const setupState = persistedAtom({
   key: 'setupState',
   default: {
     quizType: 'all',
-    questionCount: 10,
+    questionCount: 5,
   },
 })
 
