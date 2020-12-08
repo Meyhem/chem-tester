@@ -1,18 +1,393 @@
 [
   {
+    "slovak": "Vodík",
+    "latin": "Hydrogenium",
+    "formula": "H"
+  },
+  {
+    "slovak": "Hélium",
+    "latin": "Helium",
+    "formula": "He"
+  },
+  {
+    "slovak": "Lítium",
+    "latin": "Lithium",
+    "formula": "Li"
+  },
+  {
+    "slovak": "Berýlium",
+    "latin": "Beryllium",
+    "formula": "Be"
+  },
+  {
+    "slovak": "Bór",
+    "latin": "Borum",
+    "formula": "B"
+  },
+  {
+    "slovak": "Uhlík",
+    "latin": "Carboneum",
+    "formula": "C"
+  },
+  {
+    "slovak": "Dusík",
+    "latin": "Nitrogenium",
+    "formula": "N"
+  },
+  {
+    "slovak": "Kyslík",
+    "latin": "Oxygenium",
+    "formula": "O"
+  },
+  {
+    "slovak": "Fluór",
+    "latin": "Fluorum",
+    "formula": "F"
+  },
+  {
+    "slovak": "Neón",
+    "latin": "Neon",
+    "formula": "Ne"
+  },
+  {
+    "slovak": "Sodík",
+    "latin": "Natrium",
+    "formula": "Na"
+  },
+  {
+    "slovak": "Horčík",
+    "latin": "Magnesium",
+    "formula": "Mg"
+  },
+  {
+    "slovak": "Hliník",
+    "latin": "Aluminium",
+    "formula": "Al"
+  },
+  {
+    "slovak": "Kremík",
+    "latin": "Silicium",
+    "formula": "Si"
+  },
+  {
+    "slovak": "Fosfor",
+    "latin": "Phosphorus",
+    "formula": "P"
+  },
+  {
+    "slovak": "Síra",
+    "latin": "Sulphur",
+    "formula": "S"
+  },
+  {
+    "slovak": "Chlór",
+    "latin": "Chlorum",
+    "formula": "Cl"
+  },
+  {
+    "slovak": "Argón",
+    "latin": "Argon",
+    "formula": "Ar"
+  },
+  {
+    "slovak": "Draslík",
+    "latin": "Kalium",
+    "formula": "K"
+  },
+  {
+    "slovak": "Vápnik",
+    "latin": "Calcium",
+    "formula": "Ca"
+  },
+  {
+    "slovak": "Skandium",
+    "latin": "Scandium",
+    "formula": "Sc"
+  },
+  {
+    "slovak": "Titán",
+    "latin": "Titanium",
+    "formula": "Ti"
+  },
+  {
+    "slovak": "Vanád",
+    "latin": "Vanadium",
+    "formula": "V"
+  },
+  {
+    "slovak": "Chróm",
+    "latin": "Chromium",
+    "formula": "Cr"
+  },
+  {
+    "slovak": "Mangán",
+    "latin": "Manganum",
+    "formula": "Mn"
+  },
+  {
+    "slovak": "Železo",
+    "latin": "Ferrum",
+    "formula": "Fe"
+  },
+  {
+    "slovak": "Kobalt",
+    "latin": "Cobaltum",
+    "formula": "Co"
+  },
+  {
+    "slovak": "Nikel",
+    "latin": "Niccolum",
+    "formula": "Ni"
+  },
+  {
     "slovak": "Meď",
     "latin": "Cuprum",
     "formula": "Cu"
   },
   {
-    "slovak": "Voda",
-    "latin": "Dihydrogen Monoxid",
-    "formula": "H_2O"
+    "slovak": "Zinok",
+    "latin": "Zincum",
+    "formula": "Zn"
   },
   {
-    "slovak": "Hydroxid Sodný",
-    "latin": "Natrii hydroxidum",
-    "formula": "NaOH"
+    "slovak": "Gálium",
+    "latin": "Gallium",
+    "formula": "Ga"
+  },
+  {
+    "slovak": "Germánium",
+    "latin": "Germanium",
+    "formula": "Ge"
+  },
+  {
+    "slovak": "Arzén",
+    "latin": "Arsenicum",
+    "formula": "As"
+  },
+  {
+    "slovak": "Selén",
+    "latin": "Selenium",
+    "formula": "Se"
+  },
+  {
+    "slovak": "Bróm",
+    "latin": "Bromum",
+    "formula": "Br"
+  },
+  {
+    "slovak": "Kryptón",
+    "latin": "Krypton",
+    "formula": "Kr"
+  },
+  {
+    "slovak": "Rubídium",
+    "latin": "Rubidium",
+    "formula": "Rb"
+  },
+  {
+    "slovak": "Stroncium",
+    "latin": "Stroncium",
+    "formula": "Sr"
+  },
+  {
+    "slovak": "Ytrium",
+    "latin": "Ytrium",
+    "formula": "Y"
+  },
+  {
+    "slovak": "Zirkónium",
+    "latin": "Zirconium",
+    "formula": "Zr"
+  },
+  {
+    "slovak": "Niób",
+    "latin": "Niobium",
+    "formula": "Nb"
+  },
+  {
+    "slovak": "Molybdén",
+    "latin": "Molybdaenum",
+    "formula": "Mo"
+  },
+  {
+    "slovak": "Technécium",
+    "latin": "Technetium",
+    "formula": "Tc"
+  },
+  {
+    "slovak": "Ruténium",
+    "latin": "Ruthenium",
+    "formula": "Ru"
+  },
+  {
+    "slovak": "Ródium",
+    "latin": "Rhodium",
+    "formula": "Rh"
+  },
+  {
+    "slovak": "Paládium",
+    "latin": "Palladium",
+    "formula": "Pd"
+  },
+  {
+    "slovak": "Striebro",
+    "latin": "Argentum",
+    "formula": "Ag"
+  },
+  {
+    "slovak": "Kadmium",
+    "latin": "Cadmium",
+    "formula": "Cd"
+  },
+  {
+    "slovak": "Indium",
+    "latin": "Indium",
+    "formula": "In"
+  },
+  {
+    "slovak": "Cín",
+    "latin": "Stannum",
+    "formula": "Sn"
+  },
+  {
+    "slovak": "Antimón",
+    "latin": "Stibium",
+    "formula": "Sb"
+  },
+  {
+    "slovak": "Telúr",
+    "latin": "Tellurium",
+    "formula": "Te"
+  },
+  {
+    "slovak": "Jód",
+    "latin": "Iodum",
+    "formula": "I"
+  },
+  {
+    "slovak": "Xenón",
+    "latin": "Xenon",
+    "formula": "Xe"
+  },
+  {
+    "slovak": "Cézium",
+    "latin": "Caesium",
+    "formula": "Cs"
+  },
+  {
+    "slovak": "Bárium",
+    "latin": "Baryum",
+    "formula": "Ba"
+  },
+  {
+    "slovak": "Lantán",
+    "latin": "Lanthanum",
+    "formula": "La"
+  },
+  {
+    "slovak": "Cér",
+    "latin": "Cerium",
+    "formula": "Ce"
+  },
+  {
+    "slovak": "Prazeodým",
+    "latin": "Praseodymium",
+    "formula": "Pr"
+  },
+  {
+    "slovak": "Neodým",
+    "latin": "Neodymium",
+    "formula": "Nd"
+  },
+  {
+    "slovak": "Prométium",
+    "latin": "Promethium",
+    "formula": "Pm"
+  },
+  {
+    "slovak": "Samárium",
+    "latin": "Samarium",
+    "formula": "Sm"
+  },
+  {
+    "slovak": "Európium",
+    "latin": "Europium",
+    "formula": "Eu"
+  },
+  {
+    "slovak": "Gadolínium",
+    "latin": "Gadolinium",
+    "formula": "Gd"
+  },
+  {
+    "slovak": "Terbium",
+    "latin": "Terbium",
+    "formula": "Tb"
+  },
+  {
+    "slovak": "Dysprózium",
+    "latin": "Dysprosium",
+    "formula": "Dy"
+  },
+  {
+    "slovak": "Holmium",
+    "latin": "Holmium",
+    "formula": "Ho"
+  },
+  {
+    "slovak": "Erbium",
+    "latin": "Erbium",
+    "formula": "Er"
+  },
+  {
+    "slovak": "Túlium",
+    "latin": "Thulium",
+    "formula": "Tm"
+  },
+  {
+    "slovak": "Yterbium",
+    "latin": "Yterbium",
+    "formula": "Y"
+  },
+  {
+    "slovak": "Lutécium",
+    "latin": "Lutetium",
+    "formula": "Lu"
+  },
+  {
+    "slovak": "Hafnium",
+    "latin": "Hafnium",
+    "formula": "Hf"
+  },
+  {
+    "slovak": "Tantal",
+    "latin": "Tantalum",
+    "formula": "Ta"
+  },
+  {
+    "slovak": "Volfrám",
+    "latin": "Wolframium",
+    "formula": "W"
+  },
+  {
+    "slovak": "Rénium",
+    "latin": "Rhenium",
+    "formula": "Re"
+  },
+  {
+    "slovak": "Osmium",
+    "latin": "Osmium",
+    "formula": "Os"
+  },
+  {
+    "slovak": "Irídium",
+    "latin": "Iridium",
+    "formula": "Ir"
+  },
+  {
+    "slovak": "Platina",
+    "latin": "Platinum",
+    "formula": "Pt"
   },
   {
     "slovak": "Zlato",
@@ -20,28 +395,128 @@
     "formula": "Au"
   },
   {
-    "slovak": "Ozón",
-    "latin": "Ozone",
-    "formula": "O_3"
+    "slovak": "Ortuť",
+    "latin": "Hydrargyrum",
+    "formula": "Hg"
   },
   {
-    "slovak": "Chróm",
-    "latin": "Chromium",
-    "formula": "Ch"
+    "slovak": "Tálium",
+    "latin": "Thalium",
+    "formula": "Tl"
   },
   {
-    "slovak": "Kyslík",
-    "latin": "Oxxygen",
-    "formula": "O"
+    "slovak": "Olovo",
+    "latin": "Plumbum",
+    "formula": "Pb"
   },
   {
-    "slovak": "Kyanid",
-    "latin": "Hydrogen Cyanide",
-    "formula": "HCN"
+    "slovak": "Bizmut",
+    "latin": "Bismuthum",
+    "formula": "Bi"
   },
   {
     "slovak": "Polónium",
-    "latin": "Pollonium",
+    "latin": "Polonium",
     "formula": "Po"
+  },
+  {
+    "slovak": "Astát",
+    "latin": "Astatium",
+    "formula": "At"
+  },
+  {
+    "slovak": "Radón",
+    "latin": "Radon",
+    "formula": "Rn"
+  },
+  {
+    "slovak": "Francium",
+    "latin": "Francium",
+    "formula": "Fr"
+  },
+  {
+    "slovak": "Rádium",
+    "latin": "Radium",
+    "formula": "Ra"
+  },
+  {
+    "slovak": "Aktínium",
+    "latin": "Actinium",
+    "formula": "Ac"
+  },
+  {
+    "slovak": "Tórium",
+    "latin": "Thorium",
+    "formula": "Th"
+  },
+  {
+    "slovak": "Protaktínium",
+    "latin": "Protactinium",
+    "formula": "Pa"
+  },
+  {
+    "slovak": "Urán",
+    "latin": "Uranium",
+    "formula": "U"
+  },
+  {
+    "slovak": "Neptúnium",
+    "latin": "Neptunium",
+    "formula": "Np"
+  },
+  {
+    "slovak": "Plutónium",
+    "latin": "Plutonium",
+    "formula": "Pu"
+  },
+  {
+    "slovak": "Amerícium",
+    "latin": "Americium",
+    "formula": "Am"
+  },
+  {
+    "slovak": "Curium",
+    "latin": "Curium",
+    "formula": "Cm"
+  },
+  {
+    "slovak": "Berkélium",
+    "latin": "Berkelium",
+    "formula": "Bk"
+  },
+  {
+    "slovak": "Kalifornium",
+    "latin": "Californium",
+    "formula": "Cf"
+  },
+  {
+    "slovak": "Eisteinium",
+    "latin": "Eisteinium",
+    "formula": "Es"
+  },
+  {
+    "slovak": "Fermium",
+    "latin": "Fermium",
+    "formula": "Fm"
+  },
+  {
+    "slovak": "Mendelevium",
+    "latin": "Mendelevium",
+    "formula": "Md"
+  },
+  {
+    "slovak": "Nobelium",
+    "latin": "Nobelium",
+    "formula": "No"
+  },
+  {
+    "slovak": "Lawrencium",
+    "latin": "Lawrentium",
+    "formula": "Lr"
+  },
+  {
+    "slovak": "Ruterfordium",
+    "latin": "Rutherfordium",
+    "formula": "Rf"
   }
 ]

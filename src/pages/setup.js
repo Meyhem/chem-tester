@@ -5,9 +5,10 @@ import { Radio, Button, Input, Divider } from 'antd'
 import styled from 'styled-components'
 import { useRecoilState } from 'recoil'
 import { useHistory } from 'react-router-dom'
+import db from '../db.json'
 
 import { Page } from '../components/page'
-import { composeValidators, isNumber, min, required } from '../validators'
+import { composeValidators, isNumber, min, max, required } from '../validators'
 import { inTestState, quizState, setupState, usePersistedState } from '../state'
 
 import { createQuizState } from '../quiz-util'
@@ -34,6 +35,10 @@ const RadioContainer = styled(Radio.Group)`
 const Error = styled.div`
   font-weight: bold;
   color: red;
+`
+
+const LastTestButton = styled(Button)`
+  margin-bottom: 24px;
 `
 
 export const Setup = () => {
@@ -85,7 +90,12 @@ export const Setup = () => {
               <Label>Počet otázok</Label>
               <Field
                 name="questionCount"
-                validate={composeValidators(required(), isNumber(), min(1))}
+                validate={composeValidators(
+                  required(),
+                  isNumber(),
+                  min(1),
+                  max(db.length)
+                )}
                 render={({ input, meta }) => (
                   <>
                     <Input {...input} />
@@ -95,15 +105,17 @@ export const Setup = () => {
               />
             </Control>
 
-            <Button htmlType="submit">Začať test</Button>
+            <Button htmlType="submit" type="primary">
+              Začať test &raquo;
+            </Button>
           </FormLayout>
         )}
       />
       <Divider />
       {!!_.size(quiz) && (
-        <Button onClick={() => history.push('/hodnotenie')}>
+        <LastTestButton onClick={() => history.push('/hodnotenie')}>
           Pozrieť posledný test
-        </Button>
+        </LastTestButton>
       )}
     </Page>
   )

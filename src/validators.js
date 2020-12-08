@@ -10,3 +10,6 @@ export const isNumber = () => v =>
 
 export const min = minValue => v =>
   _.toNumber(v) < minValue ? `Musí byť aspoň ${minValue}` : undefined
+
+export const max = maxValue => v =>
+  _.toNumber(v) > maxValue ? `Musí byť najviac ${maxValue}` : undefined

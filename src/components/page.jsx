@@ -20,14 +20,6 @@ const StyledStep = styled(Steps.Step)`
   }
 `
 
-const ResetButton = styled(Button)`
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-  align-self: flex-end;
-  margin-top: auto;
-`
-
 export const Page = ({ step, children }) => {
   const history = useHistory()
   const [inTest] = usePersistedState(inTestState)
@@ -66,7 +58,15 @@ export const Page = ({ step, children }) => {
         </StyledSteps>
 
         {children}
-        <ResetButton onClick={restartApp}>Resetovať aplikáciu</ResetButton>
+        <br />
+        <Button
+          size="small"
+          onClick={() =>
+            confirm('Naozaj resetovať aplikáciu ?') && restartApp()
+          }
+        >
+          Resetovať aplikáciu
+        </Button>
       </StyledPage>
     </ErrorBoundary>
   )
